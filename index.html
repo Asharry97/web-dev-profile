@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev PortFolio</title>
+
+    <link rel="shortcut icon" type="image/jpg" href="imgs/svg/logo1.svg"/>
+
+    <link rel="stylesheet" href="css/bootstrap.v5-beta2.min.css">
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    
+    <script src="js/bootstrap.v5-beta2.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        main {
+            margin-top: 70px;
+        }
+
+        .carousel-inner , .carousel-item {
+            padding: 8px;
+        } 
+
+        .carousel-control-prev, .carousel-control-next {
+            background-color: #222;
+        }
+
+        .carousel-control-next, .carousel-control-prev {
+            top: 40%;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+            border-width: 4px;
+            background-color: 	#3d3d3d;
+            border-radius: 9999px;
+        }
+
+        .card {
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+            border: none;
+        }
+
+        .socio-links li a {
+            color: white !important;;
+        }
+
+        .h-400-s {
+            height: 400px!important;
+            object-fit: contain;
+        }
+
+        @media (max-width: 540px) {
+            .h-400-s {
+                height: 240px!important;
+            }
+
+            .skills-table-content .row {
+                gap: 2.4rem;
+            }
+        }
+
+        .img-over-read-more {
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .featured-projects-content-inner .card img {
+            max-height: 320px;
+            object-fit: contain;
+            transition: opacity 0.6s ease;
+        }
+
+        .featured-projects-content-inner .card:hover .img-over-read-more {
+            opacity: 1;
+        }
+
+        .featured-projects-content-inner .card:hover img {
+            opacity: 0.5;
+        }
+
+        div[class*="overview"] {
+            background: #f3f3f3;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+            <div class="container-fluid">
+                <ul class="d-flex socio-links">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://dev.to/asharry97" target="_blank" title="Dev.To">
+                            <svg width=36 height=36 viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="50" height="40" rx="3" style="fill: currentColor;"></rect><path d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z" style="fill: black"></path>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Asharry97" target="_blank" title="GitHub">
+                            <svg width=36 height=36 class="svg-inline--fa fa-github-alt fa-w-15 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512" data-fa-i2svg="">
+                                <path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://codepen.io/Asharry97/" target="_blank" title="CodePen.io">
+                            <svg width=36 height=36 class="svg-inline--fa fa-codepen fa-w-16 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="codepen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                                <path fill="currentColor" d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"></path>
+                            </svg>
+                        </a>
+                    </li>
+
+                </ul>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resume</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Skills</a>
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Intro Content -->
+        <div class="intro-content" style="background-color: #212529!important;">
+            <div class="container">
+                
+                <div class="intro-content-inner" style="padding: 40px 0px;">
+                    
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <img src="imgs/profile.jpg" width=100% height=100% style="object-fit: contain; border-radius: 8%;" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body text-white">
+                                    Hello, My Name is
+                                    <h1 class="card-title">Ashish R Bhandari</h1>
+                                    <p class="card-text">
+                                        I am a Security Engineer, who loves to explore Softwares from different angles (Security, Frontend, Backend), I keep on improving my skills by reading, researching and developing (small projects) to understand in a way that i can EXPLAIN others. This helps me to increase my knowledge & Experience.
+                                    </p>
+                                    
+                                </div>
+                                <div class="card-footer d-flex gap-4">
+                                    <button class="btn btn-outline-light">Hire Me</button>
+                                    <div class="hire-me">
+                                        <a href="#" class="btn btn-light">WhatsApp</a>
+                                        <a href="#" class="btn btn-light">EMAIL</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Skills OverView -->
+        <div class="skills-overview">
+            <div class="container">
+                
+                <div class="skills-overview-inner" style="padding: 40px 0px;">
+                    
+                    <div class="card-body">
+                        <h1 class="card-title" style="border-left: 6px solid #212529; padding-left: 18px; margin-bottom: 20px;" >Skills OverView</h1>
+                        <p class="card-text">
+                            My Skills includes Security, Backend & Frontend, I do not call myself a expert in Frontend or backend Domain But i am aware about Technologies used, how they work, where they are used and able to do code review on them, My Most Important Skill is able to understand and troubleshoot problems.
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume">Read More About Me</a>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Tech Skills Content -->
+        <div class="skills-table-content">
+            <div class="container">
+                
+                <div class="skills-table-content-inner" style="padding: 40px 0px;">
+                    
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="imgs/svg/security2.svg" class="card-img-top" alt="Security" width=80 height=80 style="object-fit: contain; margin: 8px; margin-top: -40px">
+                                <div class="card-body">
+                                    <h4 class="card-title">Security</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted"> 
+                                        <span class="badge bg-white text-dark" style="border: 1px solid; border-left: 6px solid black">Web App Sec</span> 
+                                    </h6>
+                                    <p class="card-text">I have been Working as a Security Engineer @ SafeSquid Labs which Provided Enterprise Secure Web Gateway Solution. </p>
+                                    <p class="card-text">My Work includes Product Testing (Software & Security), Product Demo, Client Setup, Client Policy Creation. <a href="#" class="" title="Go Check Out My Resume">More About Me</a> </p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <span class="badge bg-secondary">Web Testing</span> 
+                                        <span class="badge bg-secondary">Product Software & Security Testing</span>  
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge bg-secondary">Proxy</span> 
+                                        <span class="badge bg-secondary">Networking</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge bg-secondary">Secure Web Gateway</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="imgs/svg/frontend.svg" class="card-img-top" alt="Frontend" width=80 height=80 style="object-fit: contain; margin: 8px; margin-top: -40px">
+                                <div class="card-body">
+                                    <h4 class="card-title">Web Dev</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted"> 
+                                        <span class="badge bg-white text-dark" style="border: 1px solid; border-left: 6px solid black">Fronend + Backend</span> 
+                                    </h6>
+                                    <p class="card-text">I keep Exploring things from both angles (Frontend & Backend), to understand how the Application works and retrieves resources.</p>
+                                    <p class="card-text">I am comfortable with Linux OS and mostly work on them, I install, configure & develop solution & packages on Linux. <a href="#" class="" title="Go Check Out My Resume">More About Me</a></p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <span class="badge bg-secondary">HTML</span> 
+                                        <span class="badge bg-secondary">CSS</span> 
+                                        <span class="badge bg-secondary">JS</span>
+                                    </li>
+                                    <li class="list-group-item"><span class="badge bg-secondary">Python</span> <span class="badge bg-secondary">Bash</span> <span class="badge bg-secondary">NodeJS</span> <span class="badge bg-secondary">Java</span></li>
+                                    <li class="list-group-item"><span class="badge bg-secondary">Linux</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="imgs/svg/softskills.svg" class="card-img-top" alt="Soft Skills" width=80 height=80 style="object-fit: contain; margin: 8px; margin-top: -40px">
+                                <div class="card-body">
+                                    <h4 class="card-title">Soft Skills</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted"> 
+                                        <span class="badge bg-white text-dark" style="border: 1px solid; border-left: 6px solid black">Explorer</span> 
+                                    </h6>
+                                    <p class="card-text">I have been helping customer, to setup security restrictions, troubleshoot problems, give product demos, provide solution derivation and with a ready to help attitude.</p>
+                                    <p class="card-text">I love helping others on stuff which i know or on things which are interests me. <a href="#" class="" title="Go Check Out My Resume">More About Me</a></p>
+                                    
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <span class="badge bg-secondary">Troubleshooter</span> 
+                                        <span class="badge bg-secondary">Helper</span>  
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge bg-secondary">Quick Learner</span> 
+                                        <span class="badge bg-secondary">Networking</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span class="badge bg-secondary">Good Observational Skills</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div style="margin-top: 40px;">
+                        <center>
+                            <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume">Detailed Skills</a>
+                        </center>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Client Responses OverView -->
+        <div class="client-responses-overview">
+            <div class="container">
+                
+                <div class="client-responses-overview-inner" style="padding: 40px 0px;">
+                    
+                    <div class="card-body">
+                        <h1 class="card-title" style="border-left: 6px solid #212529; padding-left: 18px; margin-bottom: 20px;" >Testimonials</h1>
+                        <p class="card-text">
+                            I have helped few clients professionally and personally, and also alot of friends, below are the few responses i have received
+                        </p>
+                        <div class="d-flex gap-4">
+                            <h6 class="card-subtitle mb-2 text-muted"> 
+                                <span class="badge bg-white text-dark" style="border: 1px solid; border-bottom: 6px solid black">#Helper</span> 
+                            </h6>
+
+                            <h6 class="card-subtitle mb-2 text-muted"> 
+                                <span class="badge bg-white text-dark" style="border: 1px solid; border-bottom: 6px solid black">#Supporter</span> 
+                            </h6>
+
+                            <h6 class="card-subtitle mb-2 text-muted"> 
+                                <span class="badge bg-white text-dark" style="border: 1px solid; border-bottom: 6px solid black">#Good Teacher</span> 
+                            </h6>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Client Responses -->
+        <div class="client-responses-content">
+            <div class="container">
+                
+                <div class="client-responses-content-inner" style="padding: 40px 0px;">
+
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <center>
+                                    <div class="card" style="max-width: 540px;">
+                                        <div class="card-header">
+                                            Quote
+                                        </div>
+                                        <div class="card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, culpa officiis impedit nostrum, voluptas atque delectus dolorum aut cumque maxime sequi natus fugiat rem accusantium! Asperiores impedit eligendi libero quos.</p>
+                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="carousel-item">
+                                <center>
+                                    <div class="card" style="max-width: 540px;">
+                                        <div class="card-header">
+                                            Quote
+                                        </div>
+                                        <div class="card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint libero quam, amet recusandae magnam ea. Laboriosam perspiciatis quaerat doloremque sequi assumenda cumque ratione vitae veniam. Quasi commodi explicabo facere quibusdam?</p>
+                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                            <div class="carousel-item">
+                                <center>
+                                    <div class="card" style="max-width: 540px;">
+                                        <div class="card-header">
+                                            Quote
+                                        </div>
+                                        <div class="card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi veniam magni a fugit ullam architecto officia at non facere quam quis dolores veritatis, odio tempora quidem expedita quasi neque!</p>
+                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Featured Projects OverView -->
+        <div class="featured-projects-overview">
+            <div class="container">
+                
+                <div class="featured-projects-overview-inner" style="padding: 40px 0px;">
+                    
+                    <div class="card-body">
+                        <h1 class="card-title" style="border-left: 6px solid #212529; padding-left: 18px; margin-bottom: 20px;" >Featured Projects</h1>
+                        <p class="card-text">
+                            I have created few projects, most projects are small projects which are in Python or Bash to Automate some Stuffs for clients or for some testing, below are few of my projects which i created for someone to help him, or learn somethings, some basic tweaking, for App Plugin Developement etc and few to explain Web Security Vulnerability.
+                        </p>
+                        <div class="d-flex gap-4">
+                            <h6 class="card-subtitle mb-2 text-muted"> 
+                                <span class="badge bg-white text-dark" style="border: 1px solid; border-bottom: 6px solid black">#Web App Sec Explaining</span> 
+                            </h6>
+
+                            <h6 class="card-subtitle mb-2 text-muted"> 
+                                <span class="badge bg-white text-dark" style="border: 1px solid; border-bottom: 6px solid black">#Small Projects</span> 
+                            </h6>
+
+                            <h6 class="card-subtitle mb-2 text-muted"> 
+                                <span class="badge bg-white text-dark" style="border: 1px solid; border-bottom: 6px solid black">#Learning</span> 
+                            </h6>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Featured Projects Content -->
+        <div class="featured-projects-content">
+            <div class="container">
+                
+                <div class="featured-projects-content-inner" style="padding: 40px 0px;">
+                    
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card">
+                                <img src="imgs/projects/mjassociates/2.png" class="card-img-top" alt="...">
+                                <div class="img-over-read-more" style="position: absolute; left: 35%; top: 35%;">
+                                    <a href="#" class="btn btn-dark" title="Visit Project">Visit Project</a>
+                                </div>
+                                <div class="" style="position: absolute; top: 20px; left: -6px;">
+                                    <h3>
+                                        <span class="badge bg-dark" style="border-radius: 0; border-bottom-right-radius: 20px; border-top-right-radius: 20px;">Commercial</span> 
+                                    </h3>                                    
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">MJ & Associates</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
+                                    <p class="card-text">
+                                        I have helped them in building the Website, domain & email management etc, i handle the Techend part of the MJ & Associates, i help them maintain their website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="imgs/projects/oceanvw/php_reg_form/1_d.png" class="card-img-top" alt="...">
+                                <div class="img-over-read-more" style="position: absolute; left: 35%; top: 35%;">
+                                    <a href="#" class="btn btn-dark" title="Visit Project">Visit Project</a>
+                                </div>
+                                <div class="" style="position: absolute; top: 20px; left: -6px;">
+                                    <h3>
+                                        <span class="badge bg-dark" style="border-radius: 0; border-bottom-right-radius: 20px; border-top-right-radius: 20px;">Commercial</span> 
+                                    </h3>                                    
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">OceanVW</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
+                                    <p class="card-text">
+                                        I have helped them by building few attachable modules like the Registration form, Backend Configuration & Setup.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="col">
+                            <div class="card">
+
+                                <div class="row g-0">
+                                    <div class="col-md-4 d-flex">
+                                        <img src="imgs/projects/mjassociates/company_website.png" class="card-img-top" alt="Backend" style="object-fit: cover;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">MJ & Associates</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
+                                            <p class="card-text">
+                                                <h6>INTRO:</h6>
+                                                MJ & Associates (Advocates & Consultants) consists of Attorneys expertise in different areas of law. Our associates include Legal Advisors, Chartered Accountants (CA) & Company Secretaries (CS).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                            
+                                <div class="row g-0">
+                                    <div class="col-md-4 d-flex">
+                                        <img src="imgs/projects/colg_dnsfilter/1.png" class="card-img-top" alt="Backend" style="object-fit: contain;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">MJ & Associates</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
+                                            <p class="card-text">
+                                                <h6>INTRO:</h6>
+                                                MJ & Associates (Advocates & Consultants) consists of Attorneys expertise in different areas of law. Our associates include Legal Advisors, Chartered Accountants (CA) & Company Secretaries (CS).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        -->
+                    </div>
+
+
+                    <div style="margin-top: 40px;">
+                        <center>
+                            <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume">Other Projects</a>
+                        </center>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <footer class="footer mt-auto py-3 bg-dark">
+            <div class="container">
+                
+                <div class="hiring-quotes-content" style="background-color: #212529!important;">
+                    <div class="container">
+                        
+                        <div class="hiring-quotes-content-inner" style="padding: 40px 0px;">
+                            
+                            <div class="card-body text-center text-white">
+                                <img src="imgs/profile.jpg" alt="..." width=120 height=120 style="object-fit: cover; border-radius: 50%;">
+                                <h2 class="card-title">Interested in Hiring me for your Projects?</h2>
+                                <p class="card-text">Looking for an Person who wants to learn, built and debug your projects, I love doing it, In Free time i always try to explore different projects or application, tweaking few small components, validating my knowledge, I am always keen in learning new technologies</p>
+                                <a href="#" class="btn btn-light">Let's Talk</a>
+                            </div>
+
+                        </div>
+        
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+
+        <footer class="footer mt-auto py-3 bg-dark">
+            <div class="container">
+                <center>
+                    <span class="text-muted">Developed From Scratch, Inspired From <a href="https://themes.3rdwavemedia.com/instance/bs4/">3rdWaveMedia Instance Theme</a> </span>
+                </center>
+            </div>
+        </footer>
+    </footer>
+
+</body>
+</html>
