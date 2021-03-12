@@ -473,3 +473,81 @@ I always wanted to understand how Internet works,
 
     </div>
 </div>
+
+
+ <!-- Intro With Profile: Resume Header -->
+ <div class="intro-row card">
+    <div class="d-flex g-0">
+        <div class="profile-img">
+            <img src="imgs/profile.jpg" width=100% height=100% style="object-fit: contain; width: 220px; height: auto;" alt="...">
+        </div>
+        <div class="intro-details">
+            <div class="card-body">
+                <h1 class="card-title" style="text-transform:uppercase;">Ashish R Bhandari</h1>
+                <h3 class="card-subtitle mb-2 text-muted"> Security Engineer </h3>
+                <p class="card-text">
+                   <ul>
+                       <li>a@a.com</li>
+                       <li>+01010101</li>
+                   </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ENDS: Intro With Profile: Resume Header -->
+
+
+<div class="career-summary">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text">
+                I have helped them by building few attachable modules like the Registration form, Backend Configuration & Setup.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, esse ex possimus tempora ea dolore modi quidem non id illo quae labore tempore neque necessitatibus consectetur nemo. Ab, excepturi perferendis.
+                Odit eaque repellendus consequatur soluta iure quia vero ipsam obcaecati maxime, ipsum, nisi tempore? Labore a natus, laudantium adipisci dolorum ipsa harum ratione velit, voluptate nulla quae id, pariatur amet.
+                Natus dolor, earum tempora illum atque nisi animi aperiam reprehenderit commodi veritatis sed expedita hic quos exercitationem eos cupiditate voluptate, voluptatem alias ullam odio suscipit! Dolorem, obcaecati velit! Minus, placeat.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+Testing using OWASP Top 10 Methodology
+Internal Application Security Testing (Burp Suite, Fiddler, Postman, MitmProxy, Curl & Manual Approach)
+Leading Multiple Projects and Team
+Product Demonstration To Client
+New Product Configuration and Deployment
+LDAP/ICAP Configuration & Integration with Product
+Product Configuration Review
+Testing the SafeSquid-SWG for any kind of Functionality and Security related Bugs.
+Testing Includes:  SSL Inspection related bugs. DLP related bugs, XSS, Fuzzing.
+Product Plug-in Development (JavaScript, Python, Bash)
+
+
+
+<div class="col-md-4">
+    <h4>Skills & Tools</h4>
+    <hr>
+    <ul>
+        <li>
+            <span class="d-badge d-b-b">Web Dev(Frontend+Backend)</span>
+        </li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>NodeJS</li>
+        <li>Scripting</li>
+        <li>Linux</li>
+        <li>Code Review</li>
+    </ul>
+
+    <ul>
+        <li>Curl</li>
+        <li>BurpSuite</li>
+        <li>OpenSSL</li>
+        <li>Fiddler</li>
+        <li>MITM Proxy</li>
+        <li>Java Lucene</li>
+    </ul>
+
+</div>
