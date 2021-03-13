@@ -22,6 +22,28 @@
     <!-- BSv5 Beta 2 JS -->
     <script src="js/bootstrap.v5-beta2.bundle.min.js"></script>
 
+    <style>
+        .client-logo-imgs {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .client-logo-imgs img {
+            width: 175px;
+            height: 175px;
+            object-fit: contain;
+            filter: grayscale(1);
+            transition: all 0.6s ease;
+        }
+
+        .client-logo-imgs img:hover {
+            filter: grayscale(0);
+            transform: scale(0.92);
+        }
+
+
+    </style>
 
 </head>
 <body>
@@ -510,6 +532,42 @@
             </div>
         </div>
         <!-- Featured Projects Content Ends-->
+
+
+        
+        <!-- Client Logos OverView -->
+        <div class="client-logos-overview">
+            <div class="container">
+                
+                <div class="client-logos-overview-inner" style="padding: 40px 0px;">
+                    
+                    <div class="card-body">
+                        <div style="margin-bottom: 20px;">
+                            <h3 class="card-title b-l">Some Great Organizations i have worked with or worked for</h3>
+                            <h5 class="card-title mb-2 text-muted" >I have worked with below Organizations and loved what i did for them</h5>
+                        </div>
+                        <div class="d-flex flex-wrap client-logo-imgs" style="column-gap: 4px;">
+                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
+                                <img src="imgs/clients/safesquid-main-logo.png" alt="">
+                            </div>
+                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
+                                <img src="imgs/clients/ekids-india-main-logo.jpg" alt="">
+                            </div>
+                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
+                                <img src="imgs/clients/oceanvw-main-logo.png" alt="">
+                            </div>
+                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
+                                <img src="imgs/projects/mjassociates/company_logo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+        <!-- Client Logos OverView Ends -->  
+
 
     </main>
 
