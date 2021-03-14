@@ -1,12 +1,25 @@
+
+function fileLink() {
+    let this_pathname = window.location.pathname;
+    let this_origin = window.location.origin;
+    let filePath = this_pathname.replace(/(.*?)[^/]*\..*$/, '$1');
+    console.log("F ", filePath);
+    console.log("F ", this_origin);
+    console.log("F ", this_origin + filePath);
+    return this_origin + filePath;
+}
+
 // Get Navbar
 async function loadNavbar() {
-    document.querySelector(".navbar-component").innerHTML = await (await fetch('/navbar.html')).text();
+    const this_loc = fileLink();
+    document.querySelector(".navbar-component").innerHTML = await (await fetch(this_loc + '/navbar.html')).text();
     setActiveLink();
 }
 
 // Get Footer
 async function loadFooter() {
-    document.querySelector(".footer-component").innerHTML = await (await fetch('/footer.html')).text();
+    const this_loc = fileLink();
+    document.querySelector(".footer-component").innerHTML = await (await fetch(this_loc + '/footer.html')).text();
 }
 
 function setActiveLink() {
