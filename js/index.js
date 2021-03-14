@@ -40,6 +40,10 @@ function setActiveLink() {
             console.log("this_nav_link_path_file: ", this_nav_link_path_file, "this_window_path_file: ", this_window_path_file, " NavLink: ", one_nav_link);
             one_nav_link.classList.add("active");
             break;
+        } else if (this_window_path_file.trim() === "" && this_nav_link_path_file === "index.html") {
+            console.log("this_nav_link_path_file: ", this_nav_link_path_file, "this_window_path_file: ", this_window_path_file, " NavLink: ", one_nav_link);
+            one_nav_link.classList.add("active");
+            break;
         }
         console.log("this_nav_link_path_file: ", this_nav_link_path_file, "this_window_path_file: ", this_window_path_file, " NavLink: ", one_nav_link);
     }
