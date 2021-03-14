@@ -41,6 +41,25 @@ function setActiveLink() {
     }
 }
 
+/*** Simple Switcher */
+function switchTo() {
+    let bsRowFlex = 'row row-cols-1 row-cols-md-3 g-4';
+    let skillsTableRow = document.querySelector(".skills-table-content-inner > div");
+    if (skillsTableRow.classList.contains("row")) {
+        skillsTableRow.classList = "row-grid";
+    } else {
+        skillsTableRow.classList = bsRowFlex;
+    }
+}
+
+// Add Event
+document.querySelector(".switcher-css button").addEventListener("click", () => {
+    switchTo();
+});
+
+/*** Simple Switcher Ends */
+
+
 function main() {
     loadNavbar();
     loadFooter();
