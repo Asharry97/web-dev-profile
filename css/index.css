@@ -174,10 +174,11 @@ main {
     right: 10px!important;
 }
 
+/*
 .featured-projects-content-inner .card:hover img {
     opacity: 0.5;
 }
-
+*/
 /*** Portfolio Main Page */
 div[class*="overview"] {
     background: #f3f3f3;
