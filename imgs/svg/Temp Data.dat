@@ -551,3 +551,154 @@ Product Plug-in Development (JavaScript, Python, Bash)
     </ul>
 
 </div>
+
+
+<script defer>
+    let hire_me = document.querySelector(".hire-me");
+    hire_me.addEventListener('click', (event) => {
+        let hire_me_show = document.querySelector(".hire-me-show");
+        hire_me_show_opacity = hire_me_show.style.opacity;
+        if (hire_me_show_opacity === "0") {
+            hire_me_show.style.opacity = 1;
+        } else {
+            hire_me_show.style.opacity = 0;
+        }
+    });
+</script>
+
+
+
+
+ <div class="row">
+    <div class="col-md-5">
+
+
+        <ul class="list-group review-user-list">
+            <li class="list-group-item active" aria-current="true" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0">An active item</li>
+            <li class="list-group-item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1">A second item</li>
+            <li class="list-group-item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2">A third item</li>
+            <li class="list-group-item" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3">A fourth item</li>
+        </ul> 
+
+        <script defer>
+            let review_users_list = document.querySelectorAll(".review-user-list li");
+            review_users_list.forEach((one_li) => {
+                one_li.addEventListener('click', function(event) {
+                    console.log("Click Event: ", this);
+                    review_users_list.forEach((one__li) => { one__li.classList.remove("active")  });
+                    this.classList.add("active");
+                });
+            })
+        </script>
+
+    </div>
+
+    <div class="col-md-7">
+
+        <div id="carouselExampleCaptions" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" style="max-width: 640px; height: 500px;">
+    
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    
+                        <div class="card" style="max-width: 640px; height: 380px; margin-top: 60px;">
+                            <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                                #Passionate
+                            </div>
+                            <img src="imgs/client_profiles/Adv.Jay_Lathigara_Friend_Profile.jpg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                            <div class="card-body" style="margin-top: 50px;">
+                                <blockquote class="blockquote mb-0 ms-auto" style="margin-top: auto;">
+                                    <p>
+                                        “I think the website is GREAT! It is easy to follow along and definitely convienent because you can pull the information up whenever you need to“. <br>
+                                        Ashish is a true entrepreneur. He’s passionate about helping companies find, build and grow their next big idea.
+                                    </p>
+                                    <footer class="blockquote-footer">Adv. Jay Lathigara from <cite title="Source Title">MJ & Associates</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    
+                </div>
+
+                <div class="carousel-item">
+                    
+                    <div class="card" style="max-width: 640px; height: 380px; margin-top: 60px;">
+                        <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                            #Passionate
+                        </div>
+                        <img src="imgs/svg/default_profile.svg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                        <div class="card-body" style="margin-top: 50px;">
+                            <blockquote class="blockquote mb-0">
+                                <p>
+                                    I have worked with many freelancers in the past but Ashish stands out from the rest. We hired him based on his current portfolio and we are happy that we choose him. He is so co-operative which you will not see in other free lancers. <br>
+                                    Personally, i would like to recommend him to anyone looking for any kind of digital work - web development, SEO, digital marketing, branding or mobile app development services. Keep it up!!
+                                </p>
+                                <footer class="blockquote-footer">Pradip Yadav from <cite title="Source Title">Sales manager at Group Satellite</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <div class="carousel-item">
+                    
+                    <div class="card" style="max-width: 640px; height: 380px; margin-top: 60px;">
+                        <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                            #KuchToKartaHae
+                        </div>
+                        <img src="imgs/profile-nobg.jpg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                        <div class="card-body" style="margin-top: 50px;">
+                            <blockquote class="blockquote mb-0">
+                                <p>
+                                    uam accusamus rem expedita officiis quaerat illo quos ipsum, eos ullam cupiditate nostrum necessitatibus molestias? us optio quo facere. <br>
+                                    Amet corporis totam dquam, iusto omnis vel obcaecati, tenetur dolores necessitatibus cum aperia
+                                </p>
+                                <footer class="blockquote-footer">Ashish from <cite title="Source Title">Nowhere</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+                    
+                    <div class="card" style="max-width: 640px; height: 380px; margin-top: 60px;">
+                        <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                            #HardWorking
+                        </div>
+                        <img src="imgs/client_profiles/Adv.Prashant_B._Khadpe_Friend_Profile.jpg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                        <div class="card-body" style="margin-top: 50px;">
+                            <blockquote class="blockquote mb-0">
+                                <p>
+                                    Lorem ipsum dolorit t inventore illum q iusto provident, reiciendis porr perferendis sint magnam deserunt corrupti voluptates harum explicabo? <br>
+                                    nsectetur adipisicing elit. Dolor sius culpa amet inventore illum quos iusto provident, reiciendis porro. Fugit perferen
+                                </p>
+                                <footer class="blockquote-footer">Adv. Prashant B. Khadpe from <cite title="Source Title">MJ & Associates</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+
+    </div>
+</div>

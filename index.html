@@ -22,11 +22,13 @@
     <!-- BSv5 Beta 2 JS -->
     <script src="js/bootstrap.v5-beta2.bundle.min.js"></script>
 
+    <script src="js/index.js" defer></script>
+
     <style>
         .client-logo-imgs {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
         }
 
         .client-logo-imgs img {
@@ -42,66 +44,47 @@
             transform: scale(0.92);
         }
 
+        .socio-links {
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 540px) {
+            .socio-links li a {
+                padding: 0;
+                padding-right: 0.7rem;
+                padding-bottom: 1rem;
+                padding-top: 1rem;
+            }
+         
+            .client-responses-content-inner blockquote {
+                font-size: 1rem;
+            }
+        }
+        
+        .scroll-card::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+
+        .scroll-card::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+
+        .scroll-card::-webkit-scrollbar-thumb {
+	        background-color: #000000;
+        }
+        
+        
 
     </style>
 
 </head>
 <body>
     
-    <header>
+    <header class="navbar-component">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
-            <div class="container-fluid">
-                <ul class="d-flex socio-links">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link active" href="https://dev.to/asharry97" target="_blank" title="Dev.To">
-                            <svg width=36 height=36 viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="50" height="40" rx="3" style="fill: currentColor;"></rect><path d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z" style="fill: black"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/Asharry97" target="_blank" title="GitHub">
-                            <svg width=36 height=36 class="svg-inline--fa fa-github-alt fa-w-15 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512" data-fa-i2svg="">
-                                <path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://codepen.io/Asharry97/" target="_blank" title="CodePen.io">
-                            <svg width=36 height=36 class="svg-inline--fa fa-codepen fa-w-16 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="codepen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                <path fill="currentColor" d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                </ul>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./resume.html">Resume</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Skills</a>
-                        </li>                       
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        
 
     </header>
 
@@ -127,10 +110,14 @@
                                     
                                 </div>
                                 <div class="card-footer d-flex gap-4">
-                                    <button class="btn btn-outline-light">Hire Me</button>
-                                    <div class="hire-me">
-                                        <a href="#" class="btn btn-light">WhatsApp</a>
-                                        <a href="#" class="btn btn-light">EMAIL</a>
+                                    <button class="btn btn-outline-light hire-me">Hire Me</button>
+                                    <div class="hire-me-show" style="opacity: 0; transition: opacity 0.5s;">
+                                        <a href="#" class="btn" style="border-radius: 50%;">
+                                            <img src="imgs/svg/whatsapp.svg" width="28" height="28" alt="">
+                                        </a>
+                                        <a href="#" class="btn">
+                                            <img src="imgs/svg/email.svg" width="28" height="28" alt="">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -151,10 +138,11 @@
                     <div class="card-body">
                         <h1 class="card-title" style="border-left: 6px solid #212529; padding-left: 18px; margin-bottom: 20px;" >Skills OverView</h1>
                         <p class="card-text">
-                            My Skills includes Security Testing, Backend & Frontend, I do not call myself a expert in Frontend or backend Domain, But i am aware about Technologies used, how they work, where they are used, why are they so popular and able to do some code review on them. <br />
+                            My Skills includes Security Testing, Backend & Frontend, I try exploring softwares and understand how they are created as this helps me keep on thinking and understanding new approaches and learn it by explroring my way. I do not call myself a expert in Frontend or backend Domain, But i am aware about Technologies used, how they work, where they are used, why are they so popular and should be able to work with it.This website is created by me from scratch using bootstrapv5.<br />
                             My Most Important Skill is to understand and troubleshoot problems.
                         </p>
                         <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume">Read More About Me</a>
+                        <a href="https://github.com/Asharry97" target="_blank" class="btn btn-outline-secondary" title="For More Explore My GitHub">Explore</a>
                     </div>
                     
                 </div>
@@ -319,72 +307,128 @@
                 
                 <div class="client-responses-content-inner" style="padding: 40px 0px;">
 
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                        
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <center>
+                        <div id="carouselExampleCaptions" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" style="max-width: 600px; height: 500px;">
+                            
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                                
+                                <div class="carousel-item active">
+                                    
+                                        <div class="card" style="height: 360px; margin-top: 60px;">
+                                            <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                                                #Passionate
+                                            </div>
+                                            <img src="imgs/client_profiles/Adv.Jay_Lathigara_Friend_Profile.jpg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                                            <div class="card-body" style="margin-top: 50px;">
+                                                
+                                                <div class="card scroll-card" style="overflow-y: auto; height: 240px; margin: auto; box-shadow: none!important;;">
+                                                    <blockquote class="blockquote" style="margin-top: auto; margin-bottom: auto;" >
+                                                        <p>
+                                                            “I think the website is GREAT! It is easy to follow along and definitely convienent because you can pull the information up whenever you need to“. <br>
+                                                            Ashish is a true entrepreneur. He’s passionate about helping companies find, build and grow their next big idea.
+                                                        </p>
+                                                        <footer class="blockquote-footer">Adv. Jay Lathigara from <cite title="Source Title">MJ & Associates</cite></footer>
+                                                    </blockquote>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                
+                                </div>
+
+                                <div class="carousel-item">
+                                    
+                                    <div class="card" style="height: 360px; margin-top: 60px;">
+                                        <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                                            #Helper
+                                        </div>
+                                        <img src="imgs/svg/default_profile.svg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                                        <div class="card-body" style="margin-top: 50px;">
+                                            
+                                            <div class="card scroll-card" style="overflow-y: auto; height: 240px; margin: auto; box-shadow: none!important;;">
+                                                <blockquote class="blockquote" style="margin-top: auto; margin-bottom: auto;" >
+                                                    <p>
+                                                        I have worked with many freelancers in the past but Ashish stands out from the rest. We hired him based on his current portfolio and we are happy that we choose him. He is so co-operative which you will not see in other free lancers. <br>
+                                                        Personally, i would like to recommend him to anyone looking for any kind of digital work - web development, SEO, digital marketing, branding or mobile app development services. Keep it up!!
+                                                    </p>
+                                                    <footer class="blockquote-footer">Pradip Yadav from <cite title="Source Title">Sales manager at Group Satellite</cite></footer>
+                                                </blockquote>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                                
+                                <div class="carousel-item">
+                                
+                                    <div class="card" style="height: 360px; margin-top: 60px;">
+                                        <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                                            #KuchToKartaHae
+                                        </div>
+                                        <img src="imgs/profile-nobg.jpg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                                        <div class="card-body" style="margin-top: 50px;">
+                                            
+                                            <div class="card scroll-card" style="overflow-y: auto; height: 240px; margin: auto; box-shadow: none!important;;">
+                                                <blockquote class="blockquote" style="margin-top: auto; margin-bottom: auto;" >
+                                                    <p>
+                                                        uam accusamus rem expedita officiis quaerat illo quos ipsum, eos ullam cupiditate nostrum necessitatibus molestias? us optio quo facere. <br>
+                                                        Amet corporis totam dquam, iusto omnis vel obcaecati, tenetur dolores necessitatibus cum aperia
+                                                    </p>
+                                                    <footer class="blockquote-footer">Ashish from <cite title="Source Title">Nowhere</cite></footer>
+                                                </blockquote>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="carousel-item">
+                                    
+                                    <div class="card" style="height: 360px; margin-top: 60px;">
+                                        <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                                            #HardWorking
+                                        </div>
+                                        <img src="imgs/client_profiles/Adv.Prashant_B._Khadpe_Friend_Profile.jpg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                                        <div class="card-body" style="margin-top: 50px;">
+                                            
+                                            <div class="card scroll-card" style="overflow-y: auto; height: 240px; margin: auto; box-shadow: none!important;;">
+                                                <blockquote class="blockquote" style="margin-top: auto; margin-bottom: auto;" >
+                                                    <p>
+                                                        Lorem ipsum dolorit t inventore illum q iusto provident, reiciendis porr perferendis sint magnam deserunt corrupti voluptates harum explicabo? <br>
+                                                        nsectetur adipisicing elit. Dolor sius culpa amet inventore illum quos iusto provident, reiciendis porro. Fugit perferen
+                                                    </p>
+                                                    <footer class="blockquote-footer">Adv. Prashant B. Khadpe from <cite title="Source Title">MJ & Associates</cite></footer>
+                                                </blockquote>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                            </button>
+
                         </div>
-
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <center>
-                                    <div class="card" style="max-width: 540px;">
-                                        <div class="card-header">
-                                            Quote
-                                        </div>
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>A well-known quote, contained in a blockquote element. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, culpa officiis impedit nostrum, voluptas atque delectus dolorum aut cumque maxime sequi natus fugiat rem accusantium! Asperiores impedit eligendi libero quos.</p>
-                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </center>
-                            </div>
-                            <div class="carousel-item">
-                                <center>
-                                    <div class="card" style="max-width: 540px;">
-                                        <div class="card-header">
-                                            Quote
-                                        </div>
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>A well-known quote, contained in a blockquote element. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint libero quam, amet recusandae magnam ea. Laboriosam perspiciatis quaerat doloremque sequi assumenda cumque ratione vitae veniam. Quasi commodi explicabo facere quibusdam?</p>
-                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </center>
-                            </div>
-                            <div class="carousel-item">
-                                <center>
-                                    <div class="card" style="max-width: 540px;">
-                                        <div class="card-header">
-                                            Quote
-                                        </div>
-                                        <div class="card-body">
-                                            <blockquote class="blockquote mb-0">
-                                                <p>A well-known quote, contained in a blockquote element. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi veniam magni a fugit ullam architecto officia at non facere quam quis dolores veritatis, odio tempora quidem expedita quasi neque!</p>
-                                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
+                    </center>
                     
                 </div>
 
@@ -546,7 +590,7 @@
                             <h3 class="card-title b-l">Some Great Organizations i have worked with or worked for</h3>
                             <h5 class="card-title mb-2 text-muted" >I have worked with below Organizations and loved what i did for them</h5>
                         </div>
-                        <div class="d-flex flex-wrap client-logo-imgs" style="column-gap: 4px;">
+                        <div class="d-flex flex-wrap client-logo-imgs" style="gap: 1rem;">
                             <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
                                 <img src="imgs/clients/safesquid-main-logo.png" alt="">
                             </div>
@@ -571,38 +615,8 @@
 
     </main>
 
-    <footer>
-        <footer class="footer mt-auto py-3 bg-dark">
-            <div class="container">
-                
-                <div class="hiring-quotes-content" style="background-color: #212529!important;">
-                    <div class="container">
-                        
-                        <div class="hiring-quotes-content-inner" style="padding: 40px 0px;">
-                            
-                            <div class="card-body text-center text-white">
-                                <img src="imgs/profile.jpg" alt="..." width=120 height=120 style="object-fit: cover; border-radius: 50%;">
-                                <h2 class="card-title">Interested in Hiring me for your Projects?</h2>
-                                <p class="card-text">Looking for an Person who wants to learn, built and debug your projects, I love doing it, In Free time i always try to explore different projects or applications, sometimes tweaking few small components, mostly validating my knowledge, I am always keen in learning new technologies</p>
-                                <a href="#" class="btn btn-light">Let's Talk</a>
-                            </div>
-
-                        </div>
+    <footer class="footer-component">
         
-                    </div>
-                </div>
-
-
-            </div>
-        </footer>
-
-        <footer class="footer mt-auto py-3 bg-dark">
-            <div class="container">
-                <center>
-                    <span class="text-muted">Developed From Scratch, Inspired From <a href="https://themes.3rdwavemedia.com/instance/bs4/">3rdWaveMedia Instance Theme</a> </span>
-                </center>
-            </div>
-        </footer>
     </footer>
 
 </body>

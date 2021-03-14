@@ -1,10 +1,7 @@
 /**** 
 Colors:
-
-background: #2b3b4d;
-background: #19222c;
-
-
+#2b3b4d;
+#19222c;
 ***/
 
 
@@ -17,16 +14,17 @@ main {
     margin-top: 70px;
 }
 
-.carousel-inner , .carousel-item {
+/** Carousel Custom CSS **/
+.carousel-inner, .carousel-item {
     padding: 8px;
-} 
+}
 
 .carousel-control-prev, .carousel-control-next {
     background-color: #222;
 }
 
 .carousel-control-next, .carousel-control-prev {
-    top: 40%;
+    top: 45%;
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -35,6 +33,32 @@ main {
     background-color: 	#3d3d3d;
     border-radius: 9999px;
 }
+
+
+.carousel-control-prev {
+    left: -10px;
+}
+
+.carousel-control-next {
+    right: -10px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../imgs/svg/left-arrow.svg);
+}
+
+.carousel-control-next-icon {
+    background-image: url(../imgs/svg/right-arrow.svg);
+}
+
+.carousel-indicators button {
+    border-radius: 50%;
+    width: 12px!important;
+    height: 12px!important;
+}
+
+
+/** Carousel Custom CSS Ends **/
 
 .card {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
@@ -45,47 +69,10 @@ main {
     color: white !important;;
 }
 
+/** Custom CSS Snips */
 .h-400-s {
     height: 400px!important;
     object-fit: contain;
-}
-
-@media (max-width: 540px) {
-    .h-400-s {
-        height: 240px!important;
-    }
-
-    .skills-table-content .row {
-        gap: 2.4rem;
-    }
-}
-
-.img-over-read-more {
-    opacity: 0;
-    transition: all 0.6s ease;
-}
-
-.featured-projects-content-inner .card {
-    overflow: hidden;
-}
-
-.featured-projects-content-inner .card img {
-    max-height: 320px;
-    object-fit: contain;
-    transition: opacity 0.6s ease, opacity 0.6s ease;
-}
-
-.featured-projects-content-inner .card:hover .img-over-read-more {
-    opacity: 1;
-    right: 10px!important;
-}
-
-.featured-projects-content-inner .card:hover img {
-    opacity: 0.5;
-}
-
-div[class*="overview"] {
-    background: #f3f3f3;
 }
 
 .b-l {
@@ -146,4 +133,44 @@ div[class*="overview"] {
     border-radius: .25rem;
     background-color: #fff!important;
     color: #212529!important;
+}
+
+.img-over-read-more {
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+/** Features ***/
+.featured-projects-content-inner .card {
+    overflow: hidden;
+}
+
+.featured-projects-content-inner .card img {
+    max-height: 320px;
+    object-fit: contain;
+    transition: opacity 0.6s ease, opacity 0.6s ease;
+}
+
+.featured-projects-content-inner .card:hover .img-over-read-more {
+    opacity: 1;
+    right: 10px!important;
+}
+
+.featured-projects-content-inner .card:hover img {
+    opacity: 0.5;
+}
+
+/*** Portfolio Main Page */
+div[class*="overview"] {
+    background: #f3f3f3;
+}
+
+@media (max-width: 540px) {
+    .h-400-s {
+        height: 240px!important;
+    }
+
+    .skills-table-content .row {
+        gap: 2.4rem;
+    }
 }

@@ -14,13 +14,15 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
-    
+
     <!-- Fonts: Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     
     <!-- BSv5 Beta 2 JS -->
     <script src="js/bootstrap.v5-beta2.bundle.min.js"></script>
+
+    <script src="js/index.js" defer></script>
 
     <style>
 
@@ -91,60 +93,7 @@
 </head>
 <body>
     
-    <header>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
-            <div class="container-fluid">
-                <ul class="d-flex socio-links">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link active" href="https://dev.to/asharry97" target="_blank" title="Dev.To">
-                            <svg width=36 height=36 viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="50" height="40" rx="3" style="fill: currentColor;"></rect><path d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z" style="fill: black"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/Asharry97" target="_blank" title="GitHub">
-                            <svg width=36 height=36 class="svg-inline--fa fa-github-alt fa-w-15 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512" data-fa-i2svg="">
-                                <path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://codepen.io/Asharry97/" target="_blank" title="CodePen.io">
-                            <svg width=36 height=36 class="svg-inline--fa fa-codepen fa-w-16 fa-fw" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="codepen" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                                <path fill="currentColor" d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"></path>
-                            </svg>
-                        </a>
-                    </li>
-
-                </ul>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./resume.html">Resume</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Skills</a>
-                        </li>                       
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="navbar-component">
 
     </header>
 
@@ -164,7 +113,7 @@
         <div class="resume-holder">
             <div class="container-fluid" style=" max-width: 1200px!important;">
 
-                <div class="resume-holder-inner" style="margin-top: -180px; background: #f3f3f3;">
+                <div class="resume-holder-inner" style="margin-top: -180px; background: #fff;">
 
                     <div class="card" style="margin-bottom: 40px;">
 
@@ -223,7 +172,7 @@
                                 <div class="row">
 
                                     
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-7">
 
                                         <!-- Work Experience -->
                                         <div class="work-experience">
@@ -320,104 +269,8 @@
                                         </div>
                                         <!-- Work Experience Ends -->
 
-                                        <!-- Freelancer Experience -->
-                                        <div class="work-experience">
-                                            <h4>Freelancer Experience</h4>
-                                            <hr>
-                                            <div class="work-exp-content" style="position: relative; padding-left: 24px;">
-                                                
-                                                <!-- Freelancer 1 -->
-                                                <div class="word-exp-1 work-exp-item">
-                                                    <div class="d-flex justify-content-between">
-                                                        <h5 class="card-title">DevOps Engineer</h5>
-                                                        <h6 class="card-title">OceanVW</h6>
-                                                    </div>
-                                                    <h6 class="card-subtitle mb-2 text-muted"> Techend Engineer (System & Maintainence) </h6>
-                                                    
-                                                    <p>
-                                                        I work there to setup, configure and maintain their servers. developing small plugins and automating some business Requirements.
-                                                        I handle most of the IT tasks and help them in supporting tehir Business.
-                                                    </p>
-                                                    
-                                                    <ul>
-                                                        <li> Install Configure & Maintain Linux Servers </li>
-                                                        <li> Setup & Configure & Mini Customization of MRBS </li>
-                                                        <li> Product Plug-in Development (JavaScript, Python, Bash) </li>
-                                                        <li> Product Demonstration To Client </li>
-                                                    </ul>
-                                                    <p>
-                                                        <h6><b>Job Skills:</b></h6> 
-                                                        <span class="badge bg-dark">SysOps</span>
-                                                        <span class="badge bg-dark">Linux</span>
-                                                        <span class="badge bg-dark">Web Development</span>
-                                                        <span class="badge bg-dark">Scripting</span>
-                                                        <span class="badge bg-dark">Troubleshooting</span>
-                                                    </p>
-                                                </div>
-                                                <!-- Work Experience 1 Ends -->
-
-                                                <!-- Work Experience 2 -->
-                                                <div class="word-exp-2 work-exp-item">
-                                                    <div class="d-flex justify-content-between">
-                                                        <h5 class="card-title">Tech Team Lead</h5>
-                                                        <h6 class="card-title">MJ & Associates</h6>
-                                                    </div>
-                                                    <h6 class="card-subtitle mb-2 text-muted"> Techend Engineer (Web Dev) </h6>
-                                                    
-                                                    <p>
-                                                        I helped them built their Online Space, built their website from scratch.
-                                                        handling domain registration, email setup, website and online visibility.
-                                                    </p>
-                                                    
-                                                    <ul>
-                                                        <li> Built & Maintain their Website </li>
-                                                    </ul>
-                                                    <p>
-                                                        <h6><b>Job Skills:</b></h6> 
-                                                        <span class="badge bg-dark">Web Development</span>
-                                                        <span class="badge bg-dark">Domain & Email Management</span>
-                                                        
-                                                    </p>
-                                                </div>
-                                                <!-- Work Experience 2 Ends -->
-
-                                                <!-- Work Experience 2 -->
-                                                <div class="word-exp-3 work-exp-item">
-                                                    <div class="d-flex justify-content-between">
-                                                        <h5 class="card-title">Developer</h5>
-                                                        <h6 class="card-title">College Projects</h6>
-                                                    </div>
-                                                    <h6 class="card-subtitle mb-2 text-muted"> Web Dev </h6>
-                                                    
-                                                    <p>
-                                                        Since i love development, and college projects are recurring events, which help me create, deploy and explain projects to new peoples.
-                                                    </p>
-                                                    
-                                                    <h4>Projects:</h4>
-                                                    <ul>
-                                                        <li> DNS Blocker (Java) </li>
-                                                        <li> Web Rating App (Python) </li>
-                                                        <li> Proxy Filter (Python) </li>
-                                                        <li> Web Filtering Cross-Browser Extension (JavaScript) </li>
-                                                    </ul>
-                                                    <p>
-                                                        <h6><b>Job Skills:</b></h6> 
-                                                        <span class="badge bg-dark">Web Development</span>                                                        
-                                                        <span class="badge bg-dark">Python</span>                                                        
-                                                        <span class="badge bg-dark">Java</span>                                                        
-                                                        <span class="badge bg-dark">NodeJS</span>                                                        
-                                                    </p>
-                                                </div>
-                                                <!-- Work Experience 2 Ends -->
-
-                                            </div>
-                                        </div>
-                                        <!-- Freelancer Experience Ends -->
-
-
-
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-5">
 
                                         <!-- Skills & Tools -->
                                         <div class="skills-tools">
@@ -468,7 +321,7 @@
                                         <!-- Education Ends -->
 
                                         <!-- Awards & Laurels -->
-                                        <div class="education">
+                                        <div class="awards_laurels">
                                             <h4>Awards & Laurels</h4>
                                             <hr>
                                             <p>
@@ -490,8 +343,8 @@
                                         <!-- Awards & Laurels Ends -->
 
                                         <!-- Personal Qualities -->
-                                        <div class="education">
-                                            <h4>Awards & Laurels</h4>
+                                        <div class="personal_qualities">
+                                            <h4>Personal Qualities</h4>
                                             <hr>
                                            
                                             <h6 class="card-title fw-bold b-l">Fast Learner and Analytical Skills</h6>
@@ -502,10 +355,7 @@
                                             
                                         </div>
                                         <!-- Personal Qualities Ends -->
-                                        
-
-
-
+            
                                     </div>
 
                                 </div>
@@ -515,6 +365,107 @@
                         </div>
                     </div>
 
+                    <div class="card" style="margin-bottom: 40px;">
+
+                        <div class="card-body">
+
+                            <!-- Freelancer Experience -->
+                            <div class="work-experience">
+                                <h4>Freelancer Experience</h4>
+                                <hr>
+                                <div class="work-exp-content" style="position: relative; padding-left: 24px;">
+                                    
+                                    <!-- Freelancer 1 -->
+                                    <div class="word-exp-1 work-exp-item">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="card-title">DevOps Engineer</h5>
+                                            <h6 class="card-title">OceanVW</h6>
+                                        </div>
+                                        <h6 class="card-subtitle mb-2 text-muted"> Techend Engineer (System & Maintainence) </h6>
+                                        
+                                        <p>
+                                            I work there to setup, configure and maintain their servers. developing small plugins and automating some business Requirements.
+                                            I handle most of the IT tasks and help them in supporting tehir Business.
+                                        </p>
+                                        
+                                        <ul>
+                                            <li> Install Configure & Maintain Linux Servers </li>
+                                            <li> Setup & Configure & Mini Customization of MRBS </li>
+                                            <li> Product Plug-in Development (JavaScript, Python, Bash) </li>
+                                            <li> Product Demonstration To Client </li>
+                                        </ul>
+                                        <p>
+                                            <h6><b>Job Skills:</b></h6> 
+                                            <span class="badge bg-dark">SysOps</span>
+                                            <span class="badge bg-dark">Linux</span>
+                                            <span class="badge bg-dark">Web Development</span>
+                                            <span class="badge bg-dark">Scripting</span>
+                                            <span class="badge bg-dark">Troubleshooting</span>
+                                        </p>
+                                    </div>
+                                    <!-- Work Experience 1 Ends -->
+
+                                    <!-- Work Experience 2 -->
+                                    <div class="word-exp-2 work-exp-item">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="card-title">Tech Team Lead</h5>
+                                            <h6 class="card-title">MJ & Associates</h6>
+                                        </div>
+                                        <h6 class="card-subtitle mb-2 text-muted"> Techend Engineer (Web Dev) </h6>
+                                        
+                                        <p>
+                                            I helped them built their Online Space, built their website from scratch.
+                                            handling domain registration, email setup, website and online visibility.
+                                        </p>
+                                        
+                                        <ul>
+                                            <li> Built & Maintain their Website </li>
+                                        </ul>
+                                        <p>
+                                            <h6><b>Job Skills:</b></h6> 
+                                            <span class="badge bg-dark">Web Development</span>
+                                            <span class="badge bg-dark">Domain & Email Management</span>
+                                            
+                                        </p>
+                                    </div>
+                                    <!-- Work Experience 2 Ends -->
+
+                                    <!-- Work Experience 2 -->
+                                    <div class="word-exp-3 work-exp-item">
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="card-title">Developer</h5>
+                                            <h6 class="card-title">College Projects</h6>
+                                        </div>
+                                        <h6 class="card-subtitle mb-2 text-muted"> Web Dev </h6>
+                                        
+                                        <p>
+                                            Since i love development, and college projects are recurring events, which help me create, deploy and explain projects to new peoples.
+                                        </p>
+                                        
+                                        <h4>Projects:</h4>
+                                        <ul>
+                                            <li> DNS Blocker (Java) </li>
+                                            <li> Web Rating App (Python) </li>
+                                            <li> Proxy Filter (Python) </li>
+                                            <li> Web Filtering Cross-Browser Extension (JavaScript) </li>
+                                        </ul>
+                                        <p>
+                                            <h6><b>Job Skills:</b></h6> 
+                                            <span class="badge bg-dark">Web Development</span>                                                        
+                                            <span class="badge bg-dark">Python</span>                                                        
+                                            <span class="badge bg-dark">Java</span>                                                        
+                                            <span class="badge bg-dark">NodeJS</span>                                                        
+                                        </p>
+                                    </div>
+                                    <!-- Work Experience 2 Ends -->
+
+                                </div>
+                            </div>
+                            <!-- Freelancer Experience Ends -->
+
+                        </div>
+
+                    </div>
 
                    
                 </div>
@@ -524,14 +475,8 @@
 
     </main>
 
-    <footer>
-        <footer class="footer mt-auto py-3 bg-dark">
-            <div class="container">
-                <center>
-                    <span class="text-muted">Developed From Scratch, Inspired From <a href="https://themes.3rdwavemedia.com/instance/bs4/">3rdWaveMedia Instance Theme</a> </span>
-                </center>
-            </div>
-        </footer>
+    <footer class="footer-component">
+        
     </footer>
 
 </body>
