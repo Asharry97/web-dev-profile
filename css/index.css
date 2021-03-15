@@ -264,3 +264,7 @@ div[class*="overview"] {
 }
 
 /*** Switcher Ends **/
+
+.scroll-card {
+    padding: 10px;
+}
