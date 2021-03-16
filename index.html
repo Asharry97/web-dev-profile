@@ -83,6 +83,12 @@
             content: url(imgs/projects/oceanvw/dash_1.webp);
         }
         
+        .featured-projects-content-inner .card {
+            border-right: 4px solid;
+        }
+        .client-responses-content-inner .row {
+            --bs-gutter-x: 4rem;
+        }
 
     </style>
 
@@ -323,7 +329,7 @@
                         
                         <div class="col-md-6">
                             
-                            <h2> # <span style="border-bottom: 4px solid;">Clients</span></h2>
+                            <h2> <span style="border-right: 4px solid; padding: 5px; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; border-radius: 4px; "> # Clients</span></h2>
 
                             <div id="carousel-clients-review" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" style="/*max-width: 600px;*/ height: 500px;">
                             
@@ -424,8 +430,8 @@
 
                         <div class="col-md-6">
                             
-                            <h2> # <span style="border-bottom: 4px solid;">Friends & Colleagues</span></h2>
-                                                       
+                            <h2> <span style="border-right: 4px solid; padding: 5px; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; border-radius: 4px; "> # Friends & Colleagues</span></h2>
+             
 
                             <div id="carousel-friends_colleague-review" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel" style="/*max-width: 600px;*/ height: 500px;">
                             
@@ -551,11 +557,13 @@
                 <div class="featured-projects-content-inner" style="padding: 40px 0px;">
                     
                     <div class="row row-cols-1 row-cols-md-2 g-4">
+                        
                         <div class="col">
                             <div class="card f-p-card-1">
                                 <img src="imgs/projects/mjassociates/2.png" class="card-img-top" data-img="imgs/projects/mjassociates/proj_mja_1.webp" style="height: 320px;">
-                                <div class="img-over-read-more" style="position: absolute; top: 10px; right: -100px">
-                                    <a href="https://www.mjassociate.co.in/" target="_blank" class="btn btn-dark" title="Visit Project">Visit Project</a>
+                                <div class="img-over-read-more d-flex flex-column" style="position: absolute; top: 10px; right: -100px; gap: 5px;">
+                                    <a href="https://www.mjassociate.co.in/" target="_blank" class="btn btn-dark" title="Visit Project">Visit Site</a>
+                                    <a href="https://github.com/Asharry97/MJ_ASSOCIATE" target="_blank" class="btn btn-dark" title="Visit Project">Project Code</a>
                                 </div>
                                 <div class="" style="position: absolute; top: 20px; left: -6px;">
                                     <h3>
@@ -571,11 +579,13 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col">
                             <div class="card f-p-card-2">
                                 <img src="imgs/projects/oceanvw/php_reg_form/1_d.png" class="card-img-top" alt="imgs/projects/mjassociates/proj_mja_1.webp" style="height: 320px;">
-                                <div class="img-over-read-more" style="position: absolute; top: 10px; right: -100px">
-                                    <a href="#" class="btn btn-dark" title="Visit Project">Visit Project</a>
+                                <div class="img-over-read-more d-flex flex-column" style="position: absolute; top: 10px; right: -100px; gap: 5px;">
+                                    <a href="#" class="btn btn-dark" title="Visit Project">Visit Site</a>
+                                    <a href="#" class="btn btn-dark" title="Visit Project">Project Code</a>
                                 </div>
                                 <div class="" style="position: absolute; top: 20px; left: -6px;">
                                     <h3>
@@ -591,50 +601,51 @@
                                 </div>
                             </div>
                         </div>
-                        <!--
+                        
                         <div class="col">
-                            <div class="card">
-
-                                <div class="row g-0">
-                                    <div class="col-md-4 d-flex">
-                                        <img src="imgs/projects/mjassociates/company_website.png" class="card-img-top" alt="Backend" style="object-fit: cover;">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">MJ & Associates</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
-                                            <p class="card-text">
-                                                <h6>INTRO:</h6>
-                                                MJ & Associates (Advocates & Consultants) consists of Attorneys expertise in different areas of law. Our associates include Legal Advisors, Chartered Accountants (CA) & Company Secretaries (CS).
-                                            </p>
-                                        </div>
-                                    </div>
+                            <div class="card f-p-card-1">
+                                <img src="imgs/projects/mjassociates/2.png" class="card-img-top" data-img="imgs/projects/mjassociates/proj_mja_1.webp" style="height: 320px;">
+                                <div class="img-over-read-more d-flex flex-column" style="position: absolute; top: 10px; right: -100px; gap: 5px;">
+                                    <a href="https://www.mjassociate.co.in/" target="_blank" class="btn btn-dark" title="Visit Project">Visit Site</a>
+                                    <a href="https://github.com/Asharry97/MJ_ASSOCIATE" target="_blank" class="btn btn-dark" title="Visit Project">Project Code</a>
                                 </div>
-
+                                <div class="" style="position: absolute; top: 20px; left: -6px;">
+                                    <h3>
+                                        <span class="badge bg-dark" style="border-radius: 0; border-bottom-right-radius: 20px; border-top-right-radius: 20px;">Commercial</span> 
+                                    </h3>                                    
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">MJ & Associates</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
+                                    <p class="card-text">
+                                        I have helped them in building the Website, domain & email management etc, i handle the Techend part of the MJ & Associates, i help them maintain their website.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                            
-                                <div class="row g-0">
-                                    <div class="col-md-4 d-flex">
-                                        <img src="imgs/projects/colg_dnsfilter/1.png" class="card-img-top" alt="Backend" style="object-fit: contain;">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">MJ & Associates</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
-                                            <p class="card-text">
-                                                <h6>INTRO:</h6>
-                                                MJ & Associates (Advocates & Consultants) consists of Attorneys expertise in different areas of law. Our associates include Legal Advisors, Chartered Accountants (CA) & Company Secretaries (CS).
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
 
+                        <div class="col">
+                            <div class="card f-p-card-2">
+                                <img src="imgs/projects/oceanvw/php_reg_form/1_d.png" class="card-img-top" alt="imgs/projects/mjassociates/proj_mja_1.webp" style="height: 320px;">
+                                <div class="img-over-read-more d-flex flex-column" style="position: absolute; top: 10px; right: -100px; gap: 5px;">
+                                    <a href="#" class="btn btn-dark" title="Visit Project">Visit Site</a>
+                                    <a href="#" class="btn btn-dark" title="Visit Project">Project Code</a>
+                                </div>
+                                <div class="" style="position: absolute; top: 20px; left: -6px;">
+                                    <h3>
+                                        <span class="badge bg-dark" style="border-radius: 0; border-bottom-right-radius: 20px; border-top-right-radius: 20px;">Commercial</span> 
+                                    </h3>                                    
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">OceanVW</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">TechEnd Handling</h6>
+                                    <p class="card-text">
+                                        I have helped them by building few attachable modules like the Registration form, Backend Configuration & Setup.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        -->
+                    
                     </div>
 
 
