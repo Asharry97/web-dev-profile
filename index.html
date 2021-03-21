@@ -123,15 +123,7 @@
                                     
                                 </div>
                                 <div class="card-footer d-flex gap-4">
-                                    <button class="btn btn-outline-light hire-me">Hire Me</button>
-                                    <div class="hire-me-show" style="opacity: 0; transition: opacity 0.5s;">
-                                        <a href="#" class="btn" style="border-radius: 50%;">
-                                            <img src="imgs/svg/whatsapp.svg" width="28" height="28" alt="">
-                                        </a>
-                                        <a href="#" class="btn">
-                                            <img src="imgs/svg/email.svg" width="28" height="28" alt="">
-                                        </a>
-                                    </div>
+                                    <button class="btn btn-outline-light hire-me" data-bs-toggle="modal" data-bs-target="#show-info">Hire Me</button>
                                 </div>
                             </div>
                         </div>
@@ -154,8 +146,8 @@
                             My Skills includes Security Testing, Backend & Frontend, I try exploring softwares and understand how they are created as this helps me keep on thinking and understanding new approaches and learn it by explroring my way. I do not call myself a expert in Frontend or backend Domain, But i am aware about Technologies used, how they work, where they are used, why are they so popular and should be able to work with it.This website is created by me from scratch using bootstrapv5.<br />
                             My Most Important Skill is to understand and troubleshoot problems.
                         </p>
-                        <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume">Read More About Me</a>
-                        <a href="https://github.com/Asharry97" target="_blank" class="btn btn-outline-secondary" title="For More Explore My GitHub">Explore</a>
+                        <a href="./resume.html" class="btn btn-outline-secondary" title="Go Check Out My Resume">Read More About Me</a>
+                        <a href="https://github.com/Asharry97" target="_blank" class="btn btn-secondary" title="For More Explore My GitHub">Explore</a>
                     </div>
                     
                 </div>
@@ -192,7 +184,8 @@
                                         I handle the Tripe T part i.e #Testing, #Troubleshooting & #Training.
                                     </p>
                                     <p class="card-text">My Work includes: #Product Testing (Software & Security),  #Handle Product Demos, #Product Installation & Setup, #Client Policy Creation.
-                                        <a href="#" class="" title="Go Check Out My Resume">More About Me</a> </p>
+                                        <a href="./resume.html" class="" title="Go Check Out My Resume">More About Me</a> 
+                                    </p>
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">
@@ -224,7 +217,7 @@
                                     <p class="card-text">
                                         I am comfortable with Linux OS and mostly work with them. I install, configure & troubleshoot softwares on Linux.
                                         I have developed projects in Python,NodeJS,Bash Scripts etc.
-                                        <a href="#" class="" title="Go Check Out My Resume">More About Me</a>
+                                        <a href="./resume.html" class="" title="Go Check Out My Resume">More About Me</a>
                                     </p>
                                     
                                 </div>
@@ -254,7 +247,7 @@
                                     </p>
                                     <p class="card-text">
                                         I love helping others on stuff which i know or i am capable of doing.
-                                        <a href="#" class="" title="Go Check Out My Resume">More About Me</a>
+                                        <a href="./resume.html" class="" title="Go Check Out My Resume">More About Me</a>
                                     </p>
                                 </div>
                                 <ul class="list-group list-group-flush">
@@ -277,7 +270,7 @@
                     
                     <div style="margin-top: 40px;">
                         <center>
-                            <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume">Detailed Skills</a>
+                            <a href="./resume.html" class="btn btn-outline-secondary" title="Go Check Out My Resume">Detailed Skills</a>
                         </center>
                     </div>
 
@@ -487,6 +480,29 @@
                                         </div>
     
                                     </div>
+
+                                    <div class="carousel-item">
+                                    
+                                        <div class="card" style="height: 360px; margin-top: 60px;">
+                                            <div class="card-header bg-dark text-white" style="position: absolute; left: -20px; top: 10px;">
+                                                #KuchToKartaHae
+                                            </div>
+                                            <img src="imgs/client_profiles/Pankaj_Colg_Friend_Profile.jpg" width="100px" height="100px" style="border-radius: 50%; position: absolute;left: 40%; top: -10%; object-fit: cover;" alt="">
+                                            <div class="card-body" style="margin-top: 50px;">
+                                                
+                                                <div class="card scroll-card" style="overflow-y: auto; height: 240px; margin: auto; box-shadow: none!important;;">
+                                                    <blockquote class="blockquote" style="margin-top: auto; margin-bottom: auto;" >
+                                                        <p>
+                                                            Ashish has a good knowledge for the Network Security and Programming Language. He has help me in the my Python Project. He can navigate and make legacy code maintainable. Spends too much time chasing new technology fads and maintains awareness of industry trends and tools.
+                                                        </p>
+                                                        <footer class="blockquote-footer mt-2">Pankaj from <cite title="Source Title">Nowhere</cite></footer>
+                                                    </blockquote>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+    
+                                    </div>
                                     
                                 </div>
     
@@ -651,7 +667,7 @@
 
                     <div style="margin-top: 40px;">
                         <center>
-                            <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume">Other Projects</a>
+                            <a href="#" class="btn btn-outline-secondary" title="Go Check Out My Resume" data-bs-toggle="modal" data-bs-target="#show-info" >Other Projects</a>
                         </center>
                     </div>
                     
@@ -706,22 +722,44 @@
 
     <script defer>
         /*** Simple Switcher */
-        function switchTo() {
+        function switchTo(trigBtn) {
             let bsRowFlex = 'row row-cols-1 row-cols-md-3 g-4';
             let skillsTableRow = document.querySelector(".skills-table-content-inner > div");
             if (skillsTableRow.classList.contains("row")) {
                 skillsTableRow.classList = "row-grid";
+                trigBtn.innerText = "Switch To CSS Flex";
             } else {
                 skillsTableRow.classList = bsRowFlex;
+                trigBtn.innerText = "Switch To CSS GRID";
             }
         }
 
         // Add Event
-        document.querySelector(".switcher-css button").addEventListener("click", () => {
-            switchTo();
+        document.querySelector(".switcher-css button").addEventListener("click", function(event) {
+            switchTo(event.target);
         });
 
         /*** Simple Switcher Ends */
+
+
+        /* To Be Implemented Later
+        var exampleModal = document.getElementById('show-info');
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = exampleModal.querySelector('.modal-title')
+            var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+            modalTitle.textContent = 'New message to ' + recipient
+            modalBodyInput.value = recipient
+        })*/
+
     </script>
 
 </body>
