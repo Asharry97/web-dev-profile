@@ -28,69 +28,24 @@
     <script src="js/index.js" defer></script>
 
     <style>
-
-        .work-exp-content::before {
-            content: "";
-            display: inline-block;
-            width: 3px;
-            height: 100%;
-            background: #c8cfd8;
-            left: 6px;
-            top: 4px;
-            position: absolute;
+        .btn-float-color {
+            background: linear-gradient(to left, white 50%, black 50%) right;
+            background-size: 200%;
+            transition: .5s ease-out;
         }
 
-        .work-exp-item {
-            position: relative;
-            margin-bottom: 25px;
+        .btn-float-color:hover {
+            background-position: left;
+            color: #fff;
         }
 
-        .work-exp-item::before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: -24px;
-            top: 3px;
-            width: 15px;
-            height: 15px;
-            border: 4px solid #6f8098;
-            background: white;
-            border-radius: 50%;
-        }
-        
-        .info-contact {
-            list-style: none;
-            padding: 0;
+        .btn-float-color img {
+            transition: .5s ease-out;
         }
 
-        .info-contact li a {
-            text-decoration: none;
-            color: white;
+        .btn-float-color:hover img {
+            content: url(./imgs/svg/download_white1.svg);
         }
-
-        .info-contact li a:hover {
-            border-bottom: 2px solid white;
-        }
-
-        .profile-content {
-            display: flex;
-            /*flex-wrap: wrap;*/
-        }
-
-        @media (max-width: 540px) {
-            .profile-content {
-                flex-direction: column;
-                align-items: center;         
-                justify-content: center;
-            }
-            .profile-img img {
-                margin-top: 40px;
-                width: 125px!important;
-                height: 125px!important;
-                border-radius: 50%;
-            }
-        }
-
     </style>
 
 </head>
@@ -110,16 +65,21 @@
 
                     <div class="card">
                         <div class="" style="position: absolute; top: 0px; right: 0px;">
-
-                            <a href="#show-freelance" class="btn btn-outline-secondary show-freelance" style="color: #fff;">
-                                <img src="./imgs/svg/unlock1.svg" alt="">
-                                Show Extra Curriculum
+                            <a href="#show-freelance" class="btn btn-secondary show-freelance" style="color: #fff;">
+                                <img src="./imgs/svg/lock1.svg" alt="">
+                                More
+                                <img src="./imgs/svg/skill-gear1.svg" width="20" height="20" alt="">
                             </a>
 
-                            <button class="btn btn-outline-secondary" style="color: #fff;">
+                            <a href="./data/Ashish_R_Bhandari_Resume.pdf" target="_blank" class="btn btn-light btn-float-color">
+                                <img src="./imgs/svg/download1.svg" alt="">
+                                Resume
+                            </a>
+
+                            <a href="./data/Ashish_R_Bhandari_Resume_Full.pdf" target="_blank" class="btn btn-outline-light">
                                 <img src="./imgs/svg/download_white1.svg" alt="">
-                                Download Resume
-                            </button>
+                                Full Resume
+                            </a>
                         </div>
                     </div>
 
@@ -169,15 +129,18 @@
 
             let showFreelanceDiv = document.querySelector("#show-freelance");
             let showPersonalDiv = document.querySelector("#show-personal");
+            let lockImg = document.querySelector(".show-freelance img");
 
             console.log("showFreelanceDiv.style.display : ", showFreelanceDiv.style.display );
 
             if (showFreelanceDiv.style.display === "none" || showFreelanceDiv.style.display === "") {
                 showFreelanceDiv.style.display = "block";
                 showPersonalDiv.style.display = "block";
+                lockImg.src = "./imgs/svg/unlock1.svg";
             } else {
                 showFreelanceDiv.style.display = "none";
                 showPersonalDiv.style.display = "none";
+                lockImg.src = "./imgs/svg/lock1.svg";
             }
 
         }
