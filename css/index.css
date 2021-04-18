@@ -4,7 +4,6 @@ Colors:
 #19222c;
 ***/
 
-
 /*** Fonts: Google Fonts */
 body {
     font-family: 'Work Sans', sans-serif;
@@ -56,7 +55,6 @@ main {
     height: 12px!important;
 }
 
-
 /** Carousel Custom CSS Ends **/
 
 .card {
@@ -67,7 +65,6 @@ main {
 .socio-links li a {
     color: white !important;;
 }
-
 
 .socio-links {
     margin-bottom: 0.4rem;
@@ -90,6 +87,10 @@ main {
 .h-400-s {
     height: 400px!important;
     object-fit: contain;
+}
+
+.b-d {
+    border: 1px solid black;
 }
 
 .b-l {
@@ -157,27 +158,6 @@ main {
     transition: all 0.6s ease;
 }
 
-/** Features ***/
-.featured-projects-content-inner .card {
-    overflow: hidden;
-}
-
-.featured-projects-content-inner .card img {
-    max-height: 320px;
-    object-fit: contain;
-    transition: opacity 0.6s ease, opacity 0.6s ease;
-}
-
-.featured-projects-content-inner .card:hover .img-over-read-more {
-    opacity: 1;
-    right: 10px!important;
-}
-
-/*
-.featured-projects-content-inner .card:hover img {
-    opacity: 0.5;
-}
-*/
 /*** Portfolio Main Page */
 div[class*="overview"] {
     background: #f3f3f3;
@@ -193,9 +173,7 @@ div[class*="overview"] {
     }
 }
 
-
 /*** Whats App ***/
-
 
 .whatsapp-float-btn {
     position: fixed; /* Very Crucial */
@@ -204,7 +182,7 @@ div[class*="overview"] {
     left: 18px; 
     bottom: 40px;
     z-index: 3;
-    display: flex; /* Make It FlexBox */
+    display: flex;
 }
 
 .whatsapp-float-btn-icon {
@@ -225,8 +203,6 @@ div[class*="overview"] {
     color: #000!important;
 }
 
-
-
 .whatsapp-float-btn, .whatsapp-float-btn * {
     transition: all 0.4s ease;
 }
@@ -241,10 +217,7 @@ div[class*="overview"] {
     animation: bounce 1.6s infinite;
 }
 
-
 /********* ******/
-
-
 
 .row-grid {
     display: grid;
@@ -253,17 +226,10 @@ div[class*="overview"] {
     grid-row-gap: 50px;
 }
 
-/*** Switcher CSS **/
+/**** ***/
 
-.switcher-css { 
-    transition: left 0.5s ease;
-}
-.switcher-css:hover {
-    left: 4px!important;
+#show-freelance, #show-personal {
+    display: none;
 }
 
-/*** Switcher Ends **/
-
-.scroll-card {
-    padding: 10px;
-}
+/**** ***/

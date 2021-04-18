@@ -104,9 +104,25 @@
 
         <!-- Intro Content -->
         <div class="intro-content" style="background-color: #212529!important; height: 300px;">
-            <div class="container">
+            <div class="container" style="max-width: 1200px!important; padding: 0.4rem;">
                 
                 <div class="intro-content-inner" style="padding: 40px 0px;">
+
+                    <div class="card">
+                        <div class="" style="position: absolute; top: 0px; right: 0px;">
+
+                            <a href="#show-freelance" class="btn btn-outline-secondary show-freelance" style="color: #fff;">
+                                <img src="./imgs/svg/unlock1.svg" alt="">
+                                Show Extra Curriculum
+                            </a>
+
+                            <button class="btn btn-outline-secondary" style="color: #fff;">
+                                <img src="./imgs/svg/download_white1.svg" alt="">
+                                Download Resume
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -114,7 +130,7 @@
         <!-- Intro Content Ends -->
 
         <div class="resume-holder">
-            <div class="container-fluid" style=" max-width: 1200px!important; padding: 0.4rem;">
+            <div class="container-fluid" style="max-width: 1200px!important; padding: 0.4rem;">
 
                 <div class="resume-holder-inner" style="margin-top: -180px; background: #fff;">
 
@@ -149,8 +165,28 @@
             document.querySelector(".resume-card").innerHTML = await (await fetch(_thisLoc + '/resume-card.html')).text();
         }
 
+        function showFreelance() {
+
+            let showFreelanceDiv = document.querySelector("#show-freelance");
+            let showPersonalDiv = document.querySelector("#show-personal");
+
+            console.log("showFreelanceDiv.style.display : ", showFreelanceDiv.style.display );
+
+            if (showFreelanceDiv.style.display === "none" || showFreelanceDiv.style.display === "") {
+                showFreelanceDiv.style.display = "block";
+                showPersonalDiv.style.display = "block";
+            } else {
+                showFreelanceDiv.style.display = "none";
+                showPersonalDiv.style.display = "none";
+            }
+
+        }
+
         function main() {
             loadResumeCard();
+            document.querySelector(".show-freelance").addEventListener('click', function() {
+                showFreelance();
+            });
         }
 
         main();
