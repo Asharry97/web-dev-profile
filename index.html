@@ -27,13 +27,18 @@
     <style>
         .client-logo-imgs {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
             justify-content: center;
         }
 
+        .client-logo-imgs div {
+            border-radius: 10px;
+        }
+
         .client-logo-imgs img {
-            width: 175px;
-            height: 175px;
+            width: 180px;
+            height: 60px;
             object-fit: contain;
             filter: grayscale(1);
             transition: all 0.6s ease;
@@ -737,16 +742,16 @@
                             <h5 class="card-title mb-2 text-muted" >I have worked with below Organizations and loved what i did for them</h5>
                         </div>
                         <div class="d-flex flex-wrap client-logo-imgs" style="gap: 1rem;">
-                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
+                            <div class="bg-dark" style="">
                                 <img src="imgs/clients/safesquid-main-logo.png" alt="">
                             </div>
-                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
-                                <img src="imgs/clients/ekids-india-main-logo.jpg" alt="">
+                            <div class="bg-dark" style="">
+                                <img src="imgs/clients/ekids-india-main-logo2.jpg" alt="">
                             </div>
-                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
+                            <div class="bg-dark" style="">
                                 <img src="imgs/clients/oceanvw-main-logo.png" alt="">
                             </div>
-                            <div class="bg-dark" style="border-radius: 50%; overflow: hidden;">
+                            <div class="bg-dark" style="">
                                 <img src="imgs/projects/mjassociates/company_logo.png" alt="">
                             </div>
                         </div>

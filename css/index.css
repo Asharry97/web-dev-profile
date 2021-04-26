@@ -228,7 +228,7 @@ div[class*="overview"] {
 
 /**** ***/
 
-#show-freelance, #show-personal {
+#show-freelance, #show-personal, #show-certs {
     display: none;
 }
 

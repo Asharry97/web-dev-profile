@@ -46,6 +46,46 @@
         .btn-float-color:hover img {
             content: url(./imgs/svg/download_white1.svg);
         }
+
+        .sidebar-index {
+            position: fixed;
+            margin-top: 20px;
+            left: 10px;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+            transition: all 0.5s;
+        }
+
+        .sidebar-index a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .index-show-hide {
+            transition: width 0.5s;
+            overflow: hidden;
+        }
+
+        .index-show-hide.small {
+            width: 60px;
+        }
+
+        .show-hide-index {
+            border-radius: 50%; 
+            position: absolute; 
+            right: -18px; 
+            bottom: 40%; 
+            padding: 0; 
+            background-color: #f9f9f9; 
+            border: 2px solid; 
+            text-decoration: none;
+        }
+
+        .profile-index-page {
+            display: none;
+        }
+
     </style>
 
 </head>
@@ -88,6 +128,34 @@
             </div>
         </div>
         <!-- Intro Content Ends -->
+
+        <!-- Profile Index Section [To Work On ]-->
+        <div class="profile-index-page sidebar-index" style="position: fixed; z-index: 2; border: none">
+            <!--
+            <a href="#" class="show-hide-index btn btn-light shadow">
+                <img src="imgs/svg/right-arrow-d2.svg" width="32" height="32" alt="">
+            </a>
+            -->
+
+            <ul class="list-group index-show-hide" style="border: none;">
+                <a href="#basic-resume-card" class="list-group-item list-group-item-action fw-bold d-flex">
+                    <img src="imgs/svg/resume_man.svg" height="32" width="32" alt="">
+                    Resume
+                </a>
+                <a href="#show-freelance" class="list-group-item list-group-item-action fw-bold">
+                    <img src="imgs/svg/freelancer_type.svg" height="32" width="32" alt="">
+                    Freelancer Profile
+                </a>
+                <a href="#show-personal" class="list-group-item list-group-item-action fw-bold">
+                    <img src="imgs/svg/projects_do1.svg" height="32" width="32" alt="">
+                    Personal Projects
+                </a>
+                <a href="#show-certs" class="list-group-item list-group-item-action fw-bold">
+                    <img src="imgs/svg/certify_me.svg" height="32" width="32" alt="">
+                    Certificates
+                </a>
+            </ul>
+        </div>
 
         <div class="resume-holder">
             <div class="container-fluid" style="max-width: 1200px!important; padding: 0.4rem;">
@@ -142,13 +210,40 @@
                 showPersonalDiv.style.display = "none";
                 lockImg.src = "./imgs/svg/lock1.svg";
             }
+        }
 
+        function showProfileIndex() {
+
+            let profileIndex = document.querySelector(".profile-index-page");
+
+            let freelancer = document.querySelector("#show-freelance");
+            let personal = document.querySelector("#show-personal");
+            let certs = document.querySelector("#show-certs");
+
+            let lockImg = document.querySelector(".show-freelance img");
+
+            console.log("profileIndex.style.display : ", profileIndex.style.display );
+
+            if (profileIndex.style.display === "none" || profileIndex.style.display === "") {
+                profileIndex.style.display = "block";
+
+                //freelancer.style.display = "block";
+                //personal.style.display = "block";
+                //certs.style.display = "block";
+
+                lockImg.src = "./imgs/svg/unlock1.svg";
+            } else {
+                profileIndex.style.display = "none";
+                lockImg.src = "./imgs/svg/lock1.svg";
+            }
+            
         }
 
         function main() {
             loadResumeCard();
             document.querySelector(".show-freelance").addEventListener('click', function() {
                 showFreelance();
+                //showProfileIndex();
             });
         }
 
